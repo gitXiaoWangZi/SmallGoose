@@ -6,6 +6,7 @@ target 'SmallGoose' do
   # use_frameworks!
 
 	pod 'AFNetworking', '~> 3.0'
+    pod 'UMengAnalytics-NO-IDFA'
 #    pod 'SSZipArchive'
 
   # Pods for SmallGoose

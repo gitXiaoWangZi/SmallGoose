@@ -14,13 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
+  - UMengAnalytics-NO-IDFA (4.2.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - UMengAnalytics-NO-IDFA
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
 
-PODFILE CHECKSUM: 96ad826661e1e28b705eee643a7430b68f347f26
+PODFILE CHECKSUM: 725ab0a5c8e2fe7a8cc9abffa50f7965309ba2d9
 
 COCOAPODS: 1.2.0

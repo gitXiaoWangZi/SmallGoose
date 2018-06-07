@@ -332,20 +332,29 @@ export default class Home extends Component {
         <StatusBar backgroundColor="#fff"  barStyle="light-content" />
 
         <Image source={require('./../../../scr/images/home_top.png')} style={styles.top}>
-          <Text style={styles.title}>小鹅账单</Text>
-          <Text style={styles.totalMoney}>{totalMoney}</Text>
-          <Text style={[styles.currentMoney,this.state.haveBill?styles.currentMoneyBottom2:styles.currentMoneyBottom1]}>{currentMoney}</Text>
+            <View style={styles.superView}>
+                <View style={styles.view1}>
+                </View>
+                <View style={styles.view2}>
+                    <Text style={styles.title}>小鹅账单</Text>
+                    <Text style={styles.totalMoney}>{totalMoney}</Text>
+                    <Text style={[styles.currentMoney,this.state.haveBill?styles.currentMoneyBottom2:styles.currentMoneyBottom1]}>{currentMoney}</Text>
+                </View>
+                <View style={styles.view1}>
+                    <View style={{flex:3}}>
+                    </View>
+                    <View style={{flex:1}}>
+                        {
+                            this.state.haveBill?
 
-          {
-            this.state.haveBill?
-            <View style={styles.addBox}>
-              <TouchableOpacity onPress={this._addBill.bind(this)}>
-                <Image source={require('./../../../scr/images/home_add.png')} style={styles.add_bill} />
-              </TouchableOpacity>
+                                <TouchableOpacity onPress={this._addBill.bind(this)}>
+                                    <Image source={require('./../../../scr/images/home_add.png')} style={styles.add_bill} />
+                                </TouchableOpacity>
+                                :null
+                        }
+                    </View>
+                </View>
             </View>
-
-            :null
-          }
 
         </Image>
 
@@ -426,10 +435,23 @@ const styles = StyleSheet.create({
   add_bill:{
     width:30,
     height:30,
-    position:'absolute',
-    bottom:12,
-    right:12,
+    // position:'absolute',
+    // bottom:10,
+    // right:10,
   },
+  superView:{
+      flexDirection:'row',
+      backgroundColor:'transparent',
+      flex:1,
+  },
+  view1:{
+      flex:1,
+  },
+  view2:{
+      flex:7,
+      justifyContent:'space-around',
+      alignItems:'center',
+  }
 
 
 })
